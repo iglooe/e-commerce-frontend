@@ -1,70 +1,54 @@
-# Full Stack E-Commerce + Dashboard & CMS: Next.js 13 App Router, React, Tailwind, Prisma, MySQL, 2023
+# E-Commerce Frontend
 
-![Copy of Copy of Fullstack Twitter Clone (1)](https://github.com/AntonioErdeljac/next13-ecommerce-admin/assets/23248726/088760cb-837d-44b7-a959-63089385d0a0)
+This is the front-end for the [Admin Dashboard](https://github.com/iglooe/e-commerce-template) which provides an interface for seller workflows. Built with everything new in Next.js 13.
 
+<!-- [![E-Commerce-template](./public/images/screenshot/landing-page-screenshot.png)](https://skateshop.sadmn.com/) -->
 
-For DEMO, use [Stripe Testing Cards](https://stripe.com/docs/testing)
+> **Warning**
+> This project is still in development and is not ready for production use.
+>
+> It uses new technologies (server actions, prisma ORM) which are subject to change and may break your application.
 
-This is a repository for a Full Stack E-Commerce + Dashboard & CMS: Next.js 13 App Router, React, Tailwind, Prisma, MySQL
+## Tech Stack
 
-## MAKE SURE YOU HAVE [ADMIN](https://github.com/AntonioErdeljac/next13-ecommerce-admin/tree/master) SETUP FIRST!
+- **Framework:** [Next.js](https://nextjs.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com)
+- **Payments infrastructure:** [Stripe](https://stripe.com)
 
-[VIDEO TUTORIAL](https://youtu.be/5miHyP6lExg)
+## Features implemented
 
-Key Features:
+- [x] Validation with **Zod**
+- [x] Storefront with products, categories
+- [x] Checkout with **Stripe Checkout**
 
-- We will be using Shadcn UI for the Admin!
-- Our admin dashboard is going to serve as both CMS, Admin and API!
-- You will be able to control mulitple vendors / stores through this single CMS! (For example you can have a "Shoe store" and a "Laptop store" and a "Suit store", and our CMS will generate API routes for all of those individually!)
-- You will be able to create, update and delete categories!
-- You will be able to create, update and delete products!
-- You will be able to upload multiple images for products, and change them whenever you want!
-- You will be able to create, update and delete filters such as "Color" and "Size", and then match them in the "Product" creation form.
-- You will be able to create, update and delete "Billboards" which are these big texts on top of the page. You will be able to attach them to a single category, or use them standalone (Our Admin generates API for all of those cases!)
-- You will be able to Search through all categories, products, sizes, colors, billboards with included pagination!
-- You will be able to control which products are "featured" so they show on the homepage!
-- You will be able to see your orders, sales, etc.
-- You will be able to see graphs of your revenue etc.
-- You will learn Clerk Authentication!
-- Order creation
-- Stripe checkout
-- Stripe webhooks
-- MySQL + Prisma + PlanetScale
+## Running Locally
 
-### Prerequisites
+1. Clone the repository
 
-**Node version 14.x**
-
-### Cloning the repository
-
-```shell
-git clone https://github.com/AntonioErdeljac/next13-ecommerce-store.git
+```bash
+git clone git@github.com:iglooe/e-commerce-frontend.git
 ```
 
-### Install packages
+2. Install dependencies using npm
 
-```shell
-npm i
+```bash
+npm install
 ```
 
-### Setup .env file
+3. Copy the `.env.example` to `.env` and update the variables.
 
-
-```js
-NEXT_PUBLIC_API_URL=
+```bash
+cp .env.example .env
 ```
 
+4. Start the development server (port: 3001)
 
-### Start the app
-
-```shell
+```bash
 npm run dev
 ```
 
-## Available commands
+## How do I deploy this?
 
-Running commands with npm `npm run [command]`
-
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+Follow the deployment guides for [Vercel](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy), [Netlify](https://docs.netlify.com/integrations/frameworks/next-js/overview/) and [Heroku](https://elements.heroku.com/buildpacks/mars/heroku-nextjs) for more information.
